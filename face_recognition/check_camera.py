@@ -8,11 +8,12 @@ while (True):
     # frame = cv2.flip(frame, -1) #Flip camera vertically
     if ret:
         gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-        cv2.imshow('frame', frame)
-        cv2.imshow('gray', gray)
+        cv2.imshow('Class1', frame)
+        cv2.imshow('Class1 gray', gray)
 
         k = cv2.waitKey(30) & 0xff
     if k == 27:  # press 'ESC' to quit
+        print("Call ESC")
         break
 cap.release()
 cv2.destroyAllWindows()
